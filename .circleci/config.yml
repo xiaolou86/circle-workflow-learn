@@ -10,12 +10,12 @@ version: 2.1
 jobs:
   spell-check:
     docker:
-      - image: cimg/rust:1.75.0
+      - image: cimg/rust:1.74.0
     steps:
       # Checkout the code as the first step.
       - checkout
       # Install typos-cli
-      - run: cargo install typos-cli
+      - run: cargo install typos-cli@1.16.26
       # Run code spell check
       - run: typos
   test:
