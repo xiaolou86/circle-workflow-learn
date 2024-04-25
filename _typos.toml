@@ -3,6 +3,7 @@
 
 # test for incorrect contract_address key in deserialize_get_storage_input
 addresss = "addresss"
+adddress = "adddress"
 
 # test for incorrect block_number key in deserialize_block_id_block_number_variants
 numberr = "numberr"
