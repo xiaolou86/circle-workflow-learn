@@ -15,7 +15,7 @@ jobs:
       # Checkout the code as the first step.
       - checkout
       # Install typos-cli
-      - run: cargo install typos-cli@1.16.26
+      - run: cargo install typos-cli@1.16.25
       # Run code spell check
       - run: typos
   test:
