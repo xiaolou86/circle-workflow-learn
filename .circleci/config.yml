@@ -12,7 +12,11 @@ jobs:
     docker:
       - image: cimg/rust:1.75.0
     steps:
+      # Checkout the code as the first step.
+      - checkout
+      # Install typos-cli
       - run: cargo install typos-cli
+      # Run code spell check
       - run: typos
   test:
     # Specify the execution environment. You can specify an image from Docker Hub or use one of our convenience images from CircleCI's Developer Hub.
