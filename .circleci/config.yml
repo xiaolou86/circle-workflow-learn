@@ -10,7 +10,7 @@ version: 2.1
 jobs:
   spell-check:
     docker:
-      - image: cimg/rust:1.74.0
+      - image: cimg/rust:1.75.0
     steps:
       - run:
           name: Build
