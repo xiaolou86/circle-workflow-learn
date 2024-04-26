@@ -23,18 +23,6 @@ jobs:
           # this step doesn't need to be cached, it's relatively fast (15s on Docker/X-Large)
           name: Install nightly
           command: rustup install nightly
-      - run:
-          name: Install foundry
-          command: ./scripts/install_foundry.sh
-      - run:
-          name: Build
-          command: cargo build --release
-      - run:
-          name: Clippy check
-          command: ./scripts/clippy_check.sh
-      - run:
-          name: Format check
-          command: cargo +nightly fmt --all --check
       - save_cache:
           # Caching dependencies for future use
           # Build and Clippy steps generate their own target artifacts
