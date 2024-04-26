@@ -26,6 +26,9 @@ jobs:
           name: Install nightly
           command: rustup install nightly
       - run: rustc  --version
+      - run: cargo +nightly install typos-cli
+      # Run code spell check
+      - run: typos
       - save_cache:
           # Caching dependencies for future use
           # Build and Clippy steps generate their own target artifacts
