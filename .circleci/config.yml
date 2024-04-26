@@ -48,6 +48,7 @@ jobs:
       - run: rustc  --version
       # Checkout the code as the first step.
       - checkout
+      - run: rustc  --version
       # Install typos-cli
       #- run: cargo install typos-cli@1.16.25
       - run: cargo install typos-cli
